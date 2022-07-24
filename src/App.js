@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const updateCount = () => setCount(count + 1);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>You clicked {count} times.</p>
+      <button onClick={updateCount}>Click Me</button>
+      <h1>Scatterplot Using D3 & React</h1>
     </div>
-  );
+  )
 }
 
 export default App;
