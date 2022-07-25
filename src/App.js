@@ -73,7 +73,7 @@ const App = () => {
 
 
       </svg>
-    </div >
+    </div>
   )
 }
 
